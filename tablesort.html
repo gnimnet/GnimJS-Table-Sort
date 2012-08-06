@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Table Sort</title>
+        <link rel="stylesheet" href="tablesort.css" type="text/css"/>
+        <style>
+            * {margin:0;padding:0;}
+            body{padding:10px;}
+            h1{font-size:22px;margin:15px 0 5px;}
+            h2{font-size:20px;margin:13px 0 5px;}
+            h3{font-size:18px;margin:11px 0 5px;}
+            h4{font-size:16px;margin:9px 0 5px;}
+            h5{font-size:14px;margin:7px 0 5px;}
+            h6{font-size:12px;margin:5px 0 5px;}
+            p,.line{display:block;padding:5px;}
+            p{line-height:150%;}
+            button{padding:3px;margin:5px;}
+
+            .table{border-collapse:collapse;width:100%;}
+            .table tr{background:#fff;}
+            .table th{padding:3px 5px;background:#62605f;color:#fff;font-weight:normal;text-align:left;}
+            .table td{padding:3px 5px;text-align:left;}
+            .table .highlight-row{background:#f7f7f7;}
+        </style>
+    </head>
+    <body>
+        <h2>表格Demo</h2>
+        <table class="table table-sort">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th style="width:50px;">年龄</th>
+                    <th>学校</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ming</td>
+                    <td>23</td>
+                    <td>NWPU...this is my school</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td>2</td>
+                    <td>Lucy</td>
+                    <td class="bg-color-orange">24</td>
+                    <td class="bg-color-pink">NWPU...this is her school</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tom</td>
+                    <td class="bg-color-blue">22</td>
+                    <td class="bg-color-purple">NWPU...this is his school</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td>4</td>
+                    <td class="bg-color-green">Lily</td>
+                    <td>21</td>
+                    <td>NWPU...this is her school</td>
+                </tr>
+                <tr>
+                    <td class="bg-color-red">5</td>
+                    <td>Mike</td>
+                    <td class="bg-color-yellow">25</td>
+                    <td>NWPU...this is his school</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://raw.github.com/RockMing/GnimJS/master/full/gnim.js"></script>
+        <script src="tablesort-min.js"></script>
+        <script type="text/javascript">
+            $.ready(function(){
+                new TableSort($('.table-sort'),'highlight-row');
+            });
+        </script>
+    </body>
+</html>

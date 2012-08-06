@@ -1,0 +1,10 @@
+/*
+ * This CSS file for Table Sort JavaScript component
+ * this component works for GnimJS
+ * Write by Ming
+ * Date 2012.04.22
+ */
+
+.table-sort-th{cursor:pointer;}
+.table-sort-arrow{display:block;float:right;width:11px;height:11px;background:url("tablesort.gif") 0 0;}
+.table-sort-arrow-desc{background-position:0 -22px;}
