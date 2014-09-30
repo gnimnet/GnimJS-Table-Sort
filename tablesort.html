@@ -66,13 +66,19 @@
                     <td class="bg-color-yellow">25</td>
                     <td>NWPU...this is his school</td>
                 </tr>
+                <tr>
+                    <td class="bg-color-red">综合</td>
+                    <td></td>
+                    <td class="bg-color-yellow">23</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
-        <script src="https://raw.github.com/gnimnet/GnimJS/master/full/gnim.js"></script>
-        <script src="tablesort-min.js"></script>
+        <script src="http://gnim.net/files/GnimJS/min/gnim-min.js"></script>
+        <script src="tablesort.js"></script>
         <script type="text/javascript">
-            $.ready(function(){
-                new TableSort($('.table-sort'),'highlight-row');
+            $.ready(function() {
+                new TableSort($('.table-sort'), 'highlight-row', 1);
             });
         </script>
     </body>
