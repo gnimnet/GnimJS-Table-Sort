@@ -1,8 +1,8 @@
 /*
  *  Table Sort support
  *  Author:Ming
- *  Version:1.2.0
- *  Date:2014.09.30
+ *  Version:1.2.1
+ *  Date:2014.12.12
  */
 (function($, NULL, UNDEFINED) {
     var CLASS_TH = 'table-sort-th';
@@ -43,7 +43,7 @@
         objThis.$dom = $table;
     }
     function _isNum(text) {
-        return text !== NULL && text !== '' && !isNaN(text);
+        return text !== NULL && !isNaN(text);
     }
     /**
      * sort table
@@ -86,7 +86,7 @@
             for (var j = rows.length - 1; j >= i; j--) {
                 var row1 = rows[j];
                 var row2 = rows[j - 1];
-                var swap = isNum ? (parseFloat(row1.t) < parseFloat(row2.t)) : (row1.t < row2.t);
+                var swap = isNum ? (parseFloat(row1.t || '0') < parseFloat(row2.t || '0')) : (row1.t < row2.t);
                 if (desc) {
                     swap = !swap;
                 }
